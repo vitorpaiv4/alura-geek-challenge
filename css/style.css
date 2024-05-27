@@ -1,0 +1,199 @@
+:root {
+    --primeira-cor: #8C0375;
+    --segunda-cor: #C004D9;
+    --terceira-cor: #9303A6;
+    --quarta-cor: #5D04D9;
+    --quinta-cor: #03318C;
+    --primeira-fonte: "Press Start 2P";
+    --segunda-fonte: "IBM Plex Mono";
+}
+
+/* Header */
+.cabeçalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--quarta-cor);
+    box-shadow: 0 8px 1px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    font-family: var(--primeira-fonte);
+    color: white;
+    padding: 2%;
+}
+
+.imagem__cabecalho{
+    width: 5em;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 8% 2%;
+}
+
+.container__produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    width: 40vw;
+}
+
+.container__produtos__titulo {
+    font-size: 1.5em;
+    font-family: var(--primeira-fonte);
+    margin: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -10px 10px 1px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    
+}
+
+.cards-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+    background-color: #D6D6D6;
+    border-radius: 8px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.container__add__produto{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 0%;
+}
+
+.add__produto-titulo{
+    font-family: var(--primeira-fonte);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+#add__produto-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-categoria{
+    border: 2px solid var(--quinta-cor);
+    border-radius: 30px;
+    margin-bottom: 2rem; 
+    padding: 1rem;
+}
+
+.form-categoria input {
+    width: 100%; 
+    border: none; 
+    outline: none; 
+    box-sizing: border-box;
+    color: var(--quinta-cor);
+    font-family: var(--primeira-fonte);
+    text-transform: lowercase;
+    font-size: 1em;
+}
+
+.form-categoria input::placeholder {
+    color: var(--quinta-cor); /* Cor do texto do placeholder */
+    font-family: var(--primeira-fonte); /* Estilo da fonte do placeholder (opcional) */
+    text-transform: lowercase;
+    font-size: 1em;
+}
+
+.add__produto-button-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.add__produto-btn{
+    padding: 0.6rem 3rem;
+    background-color: var(--quarta-cor);
+    border-radius: 15px;
+    font-size: 1.25em;
+    font-family: var(--segunda-fonte);
+    color: white;
+}
+
+.limpar {
+    background-color: transparent;
+    color: var(--quarta-cor);
+    border: 2px solid var(--quarta-cor);
+}
+
+.rodape{
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    font-family: var(--segunda-fonte);
+    text-transform: uppercase;
+    padding: 4%;
+    background-color: var(--quarta-cor);
+    box-shadow: 0 -10px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rodape__img {
+    width: 20rem; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.rodape__paragrafo{
+    font-weight: 100;
+    margin-top: 0.6rem;
+}
+
+@media (max-width: 480px) {
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 12% 2%;
+    }
+
+    .add__produto-titulo {
+        align-self: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .container__add__produto {
+        width: 90vw;
+    }
+
+    .container__produtos__titulo{
+        margin: 5rem 1rem;
+    }
+
+    .container__produtos{
+        width: 90vw;
+        height: 90vh;
+        margin-bottom: 0rem;
+    }
+    .cards-container{
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        width: 90vw;
+        justify-content: flex-start;
+        
+    }
+
+    .add__produto-btn{
+        font-size: 1em;
+    }
+
+}

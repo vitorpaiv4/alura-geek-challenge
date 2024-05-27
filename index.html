@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pq-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilos-card.css">
+    <title>Alura Geek</title>
+</head>
+<body>
+    <header>
+        <div class="cabeçalho">
+            <img class="imagem__cabecalho" src="img/corações.svg" alt="corações">
+            <h1 class="titulo__cabeçalho">AluraGeek</h1>
+        </div>
+    </header>
+    <main>
+        <section class="container__produtos" data-lista>
+            <h1 class="container__produtos__titulo">Meus produtos:</h1>
+               <div class="cards-container">
+                    
+                </div>
+        </section>
+
+
+        <section class="container__add__produto">
+            <h1 class="add__produto-titulo">Adicionar<br>Produto:</h1>
+            <form id="add__produto-form" data-formulario>
+                <div class="form-categoria">
+                    <input type="text" id="product-name" name="nome" placeholder="Nome..." required data-nome>
+                </div>
+                <div class="form-categoria">
+                    <input type="number" id="product-price" name="preco" min="0" step="0.01" placeholder="Valor..." required data-preco>
+                </div>
+                <div class="form-categoria">
+                    <input type="url" id="product-image" name="imagem" placeholder="Imagem..." required data-imagem>
+                </div>
+                <div class="add__produto-button-container">
+                    <button class="add__produto-btn" type="submit">Guardar</button>
+                    <button class="add__produto-btn limpar" type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="rodape">
+            <img class="rodape__img" src="img/img_cabeçalho.svg" alt="">
+            <p class="rodape__titulo">Desenvolvido por Vitor</p>
+            <p class="rodape__paragrafo">Alura Latam | 2024</p>
+        </div>
+    </footer>
+    <script src="js/conectaApi.js"></script>
+    <script src="js/mostrarProdutos.js" type="module"></script>
+    <script src="js/criarProduto.js" type="module"></script>
+</body>
+
+</html>
